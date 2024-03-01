@@ -24,11 +24,6 @@
 /assets/vendor/
 ###< symfony/asset-mapper ###
 
-###> custom/miscellaneous ###
-.env
-.env.test
-###< custom/miscellaneous ###
-
 ###> custom/macOS ###
 .DS_Store
 ###< custom/macOS ###
