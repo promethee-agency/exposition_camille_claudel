@@ -25,5 +25,5 @@
 ###< symfony/asset-mapper ###
 
 ###> custom/macOS ###
-.DS_Store
+**/.DS_Store
 ###< custom/macOS ###

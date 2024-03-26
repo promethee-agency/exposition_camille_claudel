@@ -1,5 +1,12 @@
 controllers:
+    prefix: '{_locale}'
+    requirements:
+        _locale: '%app.supported_locales%'
     resource:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+redirect:
+   path: /
+   controller: App\Controller\RedirectController::redirectToLocale

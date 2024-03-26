@@ -1,20 +1,270 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Camille Claudel{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('styles/home/index.css') }}">
+{% endblock %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/Users/leo29plns/Documents/GitHub/camille_claudel/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>/Users/leo29plns/Documents/GitHub/camille_claudel/templates/home/index.html.twig</code></li>
-    </ul>
+{% block main %}
+<div class="splash">
+    <h1 class="travel"><span class="alternative-font">{% trans %}home.splash.travel{% endtrans %}</span></h1>
+    <img src="{{ asset("images/home/index/museum_home.webp") }}" alt="">
+    <h1 class="home">{% trans %}home.splash.home{% endtrans %}</h1>
+    <button><p>{% trans %}home.splash.visit{% endtrans %}</p></button>
 </div>
+
+<section class="top">
+    <div class="bg-sculpture"></div>
+    <div class="title">
+        <h1>Camille Claudel,</h1>
+        <div>
+            <div class="line"></div>
+            <h1><span class="alternative-font">{% trans %}home.top.the-art{% endtrans %}</span></h1>
+        </div>
+        <h1>{% trans %}home.top.4-times{% endtrans %}</h1>
+    </div>
+    <div class="scroll-down">
+        <img src="{{ asset('images/home/index/scroll-down.svg') }}" alt="">
+        <p>{% trans %}home.top.scroll{% endtrans %}</p>
+    </div>
+</section>
+
+<section class="motion">
+    <video controls muted>
+        <source src="" type="video/mp4" />
+    </video>
+</section>
+
+
+<section class="exhibition">
+    <div class="bg">
+        <p class="listen">{% trans %}home.exhibition.bg.listen{% endtrans %}</p>
+        <p class="discover">{% trans %}home.exhibition.bg.discover{% endtrans %}</p>
+        <p class="learn">{% trans %}home.exhibition.bg.learn{% endtrans %}</p>
+    </div>
+    <div class="left">
+        <div>
+            <h2>Camille Claudel,</h2>
+            <h2>{% trans %}home.exhibition.left.art-in-4{% endtrans %}</h2>
+        </div>
+        <p>{% trans %}home.exhibition.left.immerse{% endtrans %}</p>
+        </p>
+        <a href="{{ path('store.create') }}">{% trans %}home.exhibition.left.create-yours{% endtrans %}</a>
+    </div>
+
+    <div class="right">
+        <div class="cards">
+            <div class="winter"><h3>{% trans %}_commons.winter{% endtrans %}</h3></div>
+            <div class="spring"><h3>{% trans %}_commons.spring{% endtrans %}</h3></div>
+            <div class="summer"><h3>{% trans %}_commons.summer{% endtrans %}</h3></div>
+            <div class="autumn"><h3>{% trans %}_commons.autumn{% endtrans %}e</h3></div>
+        </div>
+        <div class="scroll">
+            <p>{% trans %}home.exhibition.scroll{% endtrans %}</p>
+            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM18 7L1 7V9L18 9V7Z" class="arrow-svg"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<section class="concept">
+    <div class="container">
+        <div>
+            <div class="title">
+                <h2><span class="alternative-font">{% trans %}home.concept.title.live{% endtrans %}</span>{% trans %}home.concept.title.yours{% endtrans %} </h2>
+                <div class="line"></div>
+            </div>
+            <h2>{% trans %}home.concept.title.own{% endtrans %} <span class="alternative-font">{% trans %}home.concept.title.experience{% endtrans %}</span></h2>    
+        </div>
+
+        <div class="details">
+            <div class="infos">
+                <div>
+                    <h3>{% trans %}home.concept.details.event{% endtrans %}</h3>
+                    <p>{% trans %}home.concept.details.dates{% endtrans %}</p>
+                </div>
+                <div class="price">
+                    <h3>{% trans %}home.concept.details.prices.title{% endtrans %}</h3>
+                    <table>
+                        <caption class="sr-only">{% trans %}home.concept.details.prices.title-sr{% endtrans %}</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="sr-only">{% trans %}home.concept.details.prices.category{% endtrans %}</th>
+                                <th scope="col" class="sr-only">{% trans %}home.concept.details.prices.price{% endtrans %}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">{% trans %}home.concept.details.prices.minus-18{% endtrans %} </th>
+                                <td>{% trans %}home.concept.details.prices.free{% endtrans %}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">{% trans %}home.concept.details.prices.reduced-price{% endtrans %} </th>
+                                <td>{% trans %}home.concept.details.prices.6-euros{% endtrans %}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">{% trans %}home.concept.details.prices.full-price{% endtrans %} </th>
+                                <td>{% trans %}home.concept.details.prices.10-euros{% endtrans %}</td>
+                            </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3>{% trans %}home.concept.details.hours{% endtrans %}</h3>
+                    <p>{% trans %}home.concept.details.time-slot{% endtrans %}</p>
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="{{ asset("images/home/index/virtual-man.webp") }}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="countdown">
+    <h2>{% trans %}home.countdown.next{% endtrans %} <span class="alternative-font">{% trans %}home.countdown.season{% endtrans %}</span></h2>
+    <div class="counter">
+        <div class="unit">
+            <p class="number days">00</p>
+            <p class="mesure">{% trans %}home.countdown.counter.days{% endtrans %}</p>
+        </div>
+        <div class="unit">
+            <p class="number hours">00</p>
+            <p class="mesure">{% trans %}home.countdown.counter.hours{% endtrans %}</p>
+        </div>
+        <div class="unit">
+            <p class="number minutes">00</p>
+            <p class="mesure">{% trans %}home.countdown.counter.minutes{% endtrans %}</p>
+        </div>
+        <div class="unit">
+            <p class="number seconds">00</p>
+            <p class="mesure">{% trans %}home.countdown.counter.seconds{% endtrans %}</p>
+        </div>
+    </div>
+</section>
+
+<section class="artist">
+    <div class="left">
+        <div class="bg">
+            <p class="strength">{% trans %}home.artist.left.strength{% endtrans %}</p>
+            <p class="sensivity">{% trans %}home.artist.left.sensivity{% endtrans %}</p>
+        </div>
+        <h2>{% trans %}home.artist.left.about.title{% endtrans %}</h2>
+        <div class="camille">
+            <img src="{{ asset("images/home/index/camille_claudel.webp") }}" alt="">
+            <p>{% trans %}home.artist.left.about.text{% endtrans %}</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="title">
+            <h3><span class="alternative-color">CAMILLE</span></h3>
+            <h3 class="name">CLAUDEL</h3>
+        </div>
+        <p>{% trans %}home.artist.right{% endtrans %}</p>
+    </div>
+
+</section>
+
+<section class="seasons">
+    <h2>{% trans %}home.seasons.to-each{% endtrans %}</h2>
+
+    <div class="cards">
+        <div class="winter">
+            <img src="{{ asset('images/home/index/winter.webp') }}" alt="">
+            <h3>{% trans %}_commons.winter{% endtrans %}</h3>
+            <div>
+                <p>{% trans %}home.seasons.cards.winter{% endtrans %}</p>
+            </div>
+        </div>
+        <div class="spring">
+            <img src="{{ asset('images/home/index/spring.webp') }}" alt="">
+            <h3>{% trans %}_commons.spring{% endtrans %}</h3>
+            <div>
+                <p>{% trans %}home.seasons.cards.spring{% endtrans %}</p>
+            </div>
+        </div>
+        <div class="summer">
+            <img src="{{ asset('images/home/index/summer.webp') }}" alt="">
+            <h3>{% trans %}_commons.summer{% endtrans %}</h3>
+            <div>
+                <p>{% trans %}home.seasons.cards.summer{% endtrans %}</p>
+            </div>
+        </div>
+        <div class="autumn">
+            <img src="{{ asset('images/home/index/autumn.webp') }}" alt="">
+            <h3>{% trans %}_commons.autumn{% endtrans %}</h3>
+            <div>
+                <p>{% trans %}home.seasons.cards.autumn{% endtrans %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="buy-ticket">
+    <a href="{{ path('store.create') }}">
+        <div class="title-unlock">
+            <h2 class="left">{% trans %}home.buy-ticket.get{% endtrans %}</h2>
+            <div class="right">
+                <div class="line"></div>
+                <h2>{% trans %}home.buy-ticket.access{% endtrans %}</h2>
+            </div>
+        
+            <div class="bottom">
+                <h2><span class="alternative-font">{% trans %}home.buy-ticket.click{% endtrans %}</span></h2>
+                <div class="arrow">
+                    <div class="line"></div>
+                    <div class="right"></div>                                        
+                </div>
+            </div>
+        </div>
+    </a>
+</section>
+
+<section class="questions">
+    <h2>{% trans %}home.questions.learn-more{% endtrans %}</h2>
+
+    <div class="container">
+        <details>
+            <summary>
+                <h4>{% trans %}home.questions.duration.question{% endtrans %}</h4>
+                <div class="see-more">
+                    <span></span>
+                    <span></span>
+                </div>
+            </summary>
+            <p>{% trans %}home.questions.duration.answer{% endtrans %}</p>
+        </details>
+
+        <details>
+            <summary>
+                <h4>{% trans %}home.questions.access.question{% endtrans %}</h4>
+                <div class="see-more">
+                    <span></span>
+                    <span></span>
+                </div>
+            </summary>
+            <p>{% trans %}home.questions.access.answer{% endtrans %}</p>
+        </details>
+
+
+        <details>
+            <summary>
+                <h4>{% trans %}home.questions.date.question{% endtrans %}</h4>
+                <div class="see-more">
+                    <span></span>
+                    <span></span>
+                </div>
+            </summary>
+            <p>{% trans %}home.questions.date.answer{% endtrans %}</p>
+        </details>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ asset('scripts/home/splash.js') }}"></script>
+<script src="{{ asset('scripts/home/countdown.js') }}"></script>
 {% endblock %}

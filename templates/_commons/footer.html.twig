@@ -1,0 +1,35 @@
+<footer>
+    <div class="footer">
+        <div class="top">
+            <a href="{{ path('home.index') }}"><img src="{{ asset('images/_commons/footer/black-logo.svg') }}" alt="agence prométhée"></a>
+            <nav>
+                <ul>
+                    <li><a href="{{ path('home.index') }}">{% trans from 'commons' %}footer.home{% endtrans %}</a></li>
+                    <li><a href="{{ path('exhibition.index') }}">{% trans from 'commons' %}footer.exhibition{% endtrans %}</a></li>
+                    <li><a href="https://promethee.agency/">{% trans from 'commons' %}footer.agency{% endtrans %}</a></li>
+                    <li><a href="{{ path('store.create') }}">{% trans from 'commons' %}footer.store{% endtrans %}</a></li>
+                </ul>
+            </nav>
+            <div class="address">
+                <div>
+                    <p>2 rue Albert Einstein</p>
+                    <p>77420, Champs-sur-Marne</p>
+                </div>
+                
+                <ul>
+                    <li><a href="https://www.instagram.com/promethee.agency"><img src="{{ asset('images/_commons/footer/insta.svg') }}" alt=""><span class="sr-only">{% trans from 'commons' %}footer.insta{% endtrans %}</span></a></li>
+                    <li><a href=""><img src="{{ asset('images/_commons/footer/facebook.svg') }}" alt=""><span class="sr-only">{% trans from 'commons' %}footer.facebook{% endtrans %}</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <a href="">{% trans from 'commons' %}footer.cgv{% endtrans %}</a>
+            <div class="line"></div>
+            <a href="">{% trans from 'commons' %}footer.legal{% endtrans %}</a>
+            <div class="line"></div>
+            <p>{% trans from 'commons' %}footer.rights{% endtrans %}</p>
+        </div>
+        
+    </div>
+</footer>

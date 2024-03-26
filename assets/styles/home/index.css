@@ -1,0 +1,1083 @@
+/* SPLASH SCREEN */
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--base-50);
+    z-index: 999;
+    display: none;
+}
+
+.splash.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.splash h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.splash h1 span.alternative-font {
+    font-family: 'Mazius';
+    font-style: italic;
+}
+
+.splash img {
+    height: 55svh;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    aspect-ratio: 260 / 277;
+    animation: slide-in 1000ms forwards ease;
+}
+
+.splash h1.travel {
+    position: absolute;
+    bottom: calc(55svh + 1rem);
+    transform: translate(0, 50%);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: slide-in2 700ms forwards ease;
+    animation-delay: 500ms;
+   
+}
+
+.splash h1.home {
+    position: absolute;
+    bottom: 45svh;
+    transform: translate(0, 50%);
+    opacity: 0;
+    animation: slide-in2 1000ms forwards ease;
+    animation-delay: 500ms;
+    width: 100%;
+    text-align: center;
+}
+
+.splash button {
+    background-color: var(--base-950);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    position: absolute;
+    opacity: 0;
+    animation: pop 500ms forwards ease;
+    animation-delay: 1200ms;
+    left: calc(50% + 25.8svh);
+    bottom: 18.3svh;
+    transform: translate(-50%, 50%) scale(75%);
+    overflow: hidden;
+}
+
+.splash button p {
+    color: var(--base-0);
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0;
+    animation: slide-in3 800ms forwards ease;
+    animation-delay: 1300ms;
+}
+
+/* SPLASH SCREEN KEYFRAMES  */
+@keyframes slide-in {
+    0% {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    100% {
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide-in2 {
+    0% {
+        transform: translate(0, 150%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    100% {
+        transform: translate(0, 50%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in3 {
+    0% {
+        transform: translate(0, 200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: translate(-50%, 50%) scale(75%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 50%) scale(100%);
+        opacity: 1;
+    }
+}
+
+
+
+/* MAIN */
+section h2 {
+    font-family: 'Mazius', serif;
+    font-style: italic;
+    color: var(--primary-950);
+    font-weight: normal;
+}
+
+section span.alternative-font {
+    font-family: 'Mazius';
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* TOP SECTION */
+section.top , section.top .bg-sculpture {
+    width: 100%;
+    height: 95svh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.top {
+    background-image: url("../../images/home/index/bg-top-grey.webp");
+    position: relative;
+    z-index: -1;
+}
+
+section.top .bg-sculpture {
+    background-image: url("../../images/home/index/bg-top-spring.webp");
+}
+
+section.top .title {
+    position: absolute;
+    top: 30%;
+    left: 35%; 
+    transform: translate(-30%, -35%); 
+    text-align: right; 
+    z-index: -1;
+}
+
+section.top .title h1 {
+    color: var(--base-0);
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 400;
+}
+
+section.top .title > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+section.top .title .line {
+    width: 7rem;
+    height: .25rem;
+    background-color: var(--base-0);
+}
+
+section.top .scroll-down {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    top: 85%;
+    left: 50%; 
+    transform: translate(-85%, -50%); 
+    animation: floating 1.5s infinite;
+}
+
+section.top .scroll-down > img {
+    width: 2rem;
+}
+
+section.top .scroll-down > p {
+    color: var(--base-50);
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, -0.5rem);
+
+    }
+
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+
+/* MOTION SECTION */
+section.motion video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+/* EXHIBITION SECTION */
+section.exhibition {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--glutter-normal);
+    position: relative;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+section.exhibition .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+section.exhibition .bg > p {
+    font-size: 7rem;
+    font-weight: 500;
+    color: var(--primary-200);
+    text-transform: uppercase;
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+}
+
+section.exhibition .bg > p.listen {
+    top: 0;
+    left: -1.5rem;
+}
+
+section.exhibition .bg > p.discover {
+    top: 50%;
+    right:0;
+}
+
+section.exhibition .bg > p.learn {
+    bottom: 0;
+    left: -1.5rem;
+}
+
+section.exhibition .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+section.exhibition .left > p {
+    max-width: 70ch;
+    line-height: 1.3;
+}
+
+section.exhibition .left > a {
+    padding: .7rem 2rem;
+    color: var(--base-0);
+    border-radius: 100rem;
+    background-color: var(--primary-600);
+    transition: ease-out .2s;
+    transition-property: background-color;
+}
+
+section.exhibition .left > a:hover {
+    background-color: var(--primary-900);
+}
+
+section.exhibition .right {
+    display: flex;
+    position: relative;
+    padding-top: 3rem;
+}
+
+section.exhibition .right .cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+}
+
+section.exhibition .right .cards > div {
+    height: 20rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: ease-out .3s;
+    filter: saturate(0);
+    transition-property: filter;
+    position: relative;
+}
+
+section.exhibition .right .cards > div > h3 {
+    color: var(--base-0);
+    font-family: 'Mazius';
+    font-style: italic;
+    font-weight: normal;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    opacity: 0;
+    transition: ease-out .3s;
+    transition-property: opacity;
+    text-transform: uppercase;
+}
+
+section.exhibition .right .cards div:hover {
+    filter: initial;
+}
+
+section.exhibition .right .cards div:hover h3 {
+    opacity: 1;
+}
+
+section.exhibition .right .cards .winter {
+    background-image: url("../../images/home/index/card_winter.webp");
+    grid-area: winter;
+}
+
+section.exhibition .right .cards .spring {
+    background-image: url("../../images/home/index/card_spring.webp");
+    grid-area: spring;
+}
+
+section.exhibition .right .cards .summer {
+    background-image: url("../../images/home/index/card_summer.webp");
+    grid-area: summer;
+}
+
+section.exhibition .right .cards .autumn {
+    background-image: url("../../images/home/index/card_autumn.webp");
+    grid-area: autumn;
+}
+
+section.exhibition .right .scroll {
+    display: none;
+}
+
+/* CONCEPT SECTION */
+section.concept {
+    background-color: var(--base-950);
+    padding: 5rem var(--glutter-normal);
+    z-index: -1;
+}
+
+section.concept .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    border-bottom: solid .25rem var(--base-0);
+}
+
+section.concept .container h2 {
+    color: var(--primary-50);
+    font-family: 'satoshi';
+}
+
+section.concept .container h2 span.alternative-font {
+    color: var(--primary-400);
+}
+
+section.concept .container .title {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+section.concept .container .title .line {
+    flex: 1;
+    height: .25rem;
+    background-color: var(--base-0);
+}
+
+
+section.concept .container .details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+}
+
+section.concept .container .details .infos h3{
+    color: var(--primary-50);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: .5rem;
+}
+
+section.concept .container .details .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: var(--base-0);
+}
+
+section.concept .container .details .infos .price table {
+    table-layout: fixed;
+    width:80%;
+}
+
+section.concept .container .details .infos .price tbody tr {
+    border-bottom: solid 1px var(--base-0);
+}
+
+section.concept .container .details .infos .price th {
+    text-align: left;
+    padding: .5rem 0rem;
+}
+
+section.concept .container .details .infos .price td {
+    text-align: right;
+}
+
+section.concept .container .details .image {
+    margin: auto;
+}
+
+/* COUNTDOWN SECTION */
+section.countdown {
+    padding: 5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+section.countdown h2 {
+    font-family: 'Satoshi';
+    font-style: italic;
+}
+
+section.countdown .counter {
+    display: flex;
+    gap: 1.5rem;
+}
+
+section.countdown .counter .unit {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    align-items: center;
+}
+
+section.countdown .counter .unit .number {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-950);
+}
+
+/* ARTIST SECTION */
+section.artist {
+    display: flex;
+    flex-direction: column;
+    /* height: 80svh; */
+}
+
+section.artist .right {
+    width: 100%;
+    background-color: var(--base-950);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem var(--glutter-normal);
+}
+
+section.artist .right .title {
+    width: 100%;
+}
+
+section.artist .right .title h3 {
+    color: var(--primary-50);
+    font-family: 'Mazius';
+    font-weight: normal;
+    font-style: italic;
+    font-size:3rem;
+}
+
+section.artist .right .title h3.name {
+    text-align: right;
+}
+
+section.artist .right .title h3 span.alternative-color {
+    color: var(--primary-400);
+    text-align: left;
+    
+}
+
+section.artist .right p {
+    color:var(--base-0);
+    line-height: 1.3;
+    font-size: var(--text-base);
+}
+
+section.artist .left {
+    width: 100%;
+    position: relative;
+    padding: 2rem 0rem;
+    overflow: hidden;
+}
+
+section.artist .left h2 {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: right;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+section.artist .left .camille img {
+    width: 16rem;
+}
+
+section.artist .left .camille {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 70%;
+    margin: auto;
+}
+
+section.artist .left .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+section.artist .left .bg > p {
+    font-size: 5rem;
+    font-weight: 500;
+    color: var(--primary-200);
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+}
+
+section.artist .left .bg > p.strength {
+    bottom: 2rem;
+    left: -1.5rem;
+}
+
+section.artist .left .bg > p.sensivity {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    bottom: 0rem;
+    right: -1rem;
+}
+
+
+/* SEASONS SECTION */
+section.seasons {
+    padding: 6rem var(--glutter-normal);
+}
+
+section.seasons h2 {
+    margin-bottom: 2.5rem;
+}
+
+section.seasons .cards {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+section.seasons .cards > div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1.5rem;
+    border: solid .125rem var(--base-950);
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+section.seasons .cards > div img {
+    aspect-ratio: 14 / 9;
+    width: 100%;
+    object-fit: cover;
+}
+
+section.seasons .cards > div h3 {
+    font-family: 'Mazius', serif;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+section.seasons .cards > div > div {
+    padding: 1rem;
+    border: solid .125rem var(--base-950);
+    color: var(--base-950);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.seasons .cards .winter div {
+    background-color: var(--winter-200);
+}
+
+section.seasons .cards .winter h3 {
+    color: var(--winter-900);
+}
+
+section.seasons .cards .spring div {
+    background-color: var(--spring-200);
+}
+
+section.seasons .cards .spring h3 {
+    color: var(--spring-900);
+}
+
+section.seasons .cards .summer div {
+    background-color: var(--summer-200);
+}
+
+section.seasons .cards .summer h3 {
+    color: var(--summer-900);
+}
+
+section.seasons .cards .autumn div {
+    background-color: var(--autumn-200);
+}
+
+section.seasons .cards .autumn h3 {
+    color: var(--autumn-900);
+}
+
+/* BUY TICKETS SECTION */
+section.buy-ticket {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem var(--glutter-normal);
+    background-color: var(--base-950);
+}
+
+section.buy-ticket a .title-unlock {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 1rem;
+    margin: auto;
+}
+ 
+section.buy-ticket a h2 {
+    color: var(--primary-50);
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size:2rem;
+}
+
+section.buy-ticket a h2 span.alternative-font{
+    color: var(--primary-400);
+    font-family: 'Mazius';
+    font-style: italic;
+}
+
+section.buy-ticket a .right, section.buy-ticket a .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+section.buy-ticket a .bottom h2 {
+    text-align: right;
+}
+ 
+section.buy-ticket a .right .line {
+    flex: 1;
+    width: 10rem;
+    height: .25rem;
+    background-color: var(--primary-50);
+}
+
+section.buy-ticket a .bottom .arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+section.buy-ticket a .bottom .arrow .line {
+    width: 3rem;
+    height: .25rem;
+    background-color: var(--primary-50);
+}
+
+section.buy-ticket a .bottom .arrow .right {
+    border: solid var(--primary-50);
+    border-width: 0 .3rem .3rem 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+    padding: .5rem;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 0.2rem;
+}
+
+
+/* QUESTIONS SECTION */
+section.questions {
+    padding: 3rem var(--glutter-normal) 8rem var(--glutter-normal);
+}
+
+section.questions .container {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+section.questions .container summary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    border-bottom: solid 2px var(--primary-950);
+    padding: 1.5rem 0rem;
+    cursor: pointer;
+}
+
+section.questions .container summary h4{
+    color: var(--primary-950);
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+section.questions .container summary .see-more {
+    position: relative;
+    width: 1.2rem; 
+    height: 1.2rem;
+    margin-right: 1.3rem;
+}
+
+section.questions .container summary .see-more span {
+    display: block;
+    height: 0.125rem;
+    background-color: var(--primary-950);
+    width: 100%;
+    border-radius: 100rem;
+    transition: all 0.5s ease;
+    z-index: 10;
+    transition: all .25s ease;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 50%;
+}
+
+section.questions .container summary .see-more span:last-child {
+    transform: rotate(90deg);
+}
+
+section.questions .container details[open] .see-more span:last-child {
+    display: none;
+}
+
+
+section.questions .container details p {
+    padding: 2rem;
+    display: block;
+    line-height: 1.3;
+}
+
+    
+/* MEDIAS QUERIES */
+
+/* above 640px */
+@media (min-width: 40rem) {
+    .splash h1 {
+        font-size: 7rem;
+        font-weight: 500;
+    }
+
+    .splash img {
+        height: 65svh;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        aspect-ratio: 260 / 277;
+    }
+
+    .splash h1.travel {
+        bottom: calc(65svh + 2rem);
+        transform: translate(0, 50%);
+       
+    }
+    
+    .splash h1.home {
+        bottom: 50svh;
+        transform: translate(0, 50%);
+    }
+
+    .splash button {
+        width: 9rem;
+        height: 9rem;
+        left: calc(50% + 30.5svh);
+        bottom: 21.7svh;
+        transform: translate(-50%, 50%) scale(75%);
+        overflow: hidden;
+    }
+
+    section.exhibition .right .cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        overflow-y: auto;
+        grid-template-areas: 
+        "winter ."
+        "winter spring"
+        "summer spring"
+        "summer autumn"
+        ". autumn";
+    }
+
+    section.exhibition .right .cards > div {
+        height: 30rem;
+    }
+
+    section.exhibition .right .cards > div > h3 {
+        font-size: var(--text-4xl);
+    }
+
+    section.concept .container .details .image {
+        margin: inherit;
+        margin-left: auto;
+    }
+
+    section.concept .container .details .infos .price table {
+        width:20rem;
+    }
+
+    section.countdown .counter {
+        gap: 4rem;
+    }
+
+    section.countdown .counter .unit .number {
+        font-size: 4rem;
+    }
+
+    section.artist .right .title h3 {
+        font-size:5rem;
+    }
+
+    section.buy-ticket {
+        height: 70svh;
+        padding: 0rem var(--glutter-normal);
+    }
+
+    section.buy-ticket a h2 {
+        font-size: 3rem;
+    }
+
+    section.buy-ticket a .bottom .arrow .line {
+        width: 4rem;
+    }
+    
+    section.buy-ticket a .bottom .arrow .right {
+        height: 2rem;
+        width: 2rem;
+        right: 0.3rem;
+    }
+    
+}
+
+/* above 768px */
+@media (min-width: 48rem) {
+    section.artist .right {
+        padding: 4rem var(--glutter-normal);
+    }
+
+    section.artist {
+        flex-direction: row;
+    }
+
+    section.artist .left .bg > p.sensivity {
+        bottom: 0rem;
+        right: -1.5rem;
+    }
+    
+    section.questions .container {
+        margin-top: 4rem;
+        margin-left: auto;
+        width: 80%;
+    }
+} 
+
+
+
+/* above 1024px */
+@media (min-width: 64rem) {
+    .splash h1 {
+        font-size: 9rem;
+        font-weight: 500;
+    }
+    
+    section h1 {
+        font-size: 4rem;
+    }
+
+    section h2 {
+        font-size: var(--text-5xl);
+    }
+
+    section.exhibition {
+        height: 80svh;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+    
+    section.exhibition .left {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    section.exhibition .left > p {
+        max-width: 30rem;
+        line-height: 1.3;
+    }
+
+    section.exhibition .right {
+        width: 60%;
+        padding-top: 3rem;
+    }
+
+    section.exhibition .right .scroll {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        right: calc(var(--glutter-normal) * -0.5);
+        bottom: 0;
+        transform: translateX(50%);
+    }
+    
+    section.exhibition .right .scroll > svg {
+        fill: var(--base-950);
+        rotate: -90deg;
+        aspect-ratio: 3 / 4;
+    }
+    
+    section.exhibition .right .scroll > p {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    section.concept .container .details {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 2.5rem;
+        gap: inherit;
+    }
+
+    section.countdown .counter .unit .number {
+        font-size: 6rem;
+    }
+
+    section.artist .right .title h3 {
+        font-size:6rem;
+    }
+
+    section.artist .right p {
+        font-size: var(--text-lg);
+    }
+
+    section.artist .left .camille img {
+        width: 20rem;
+    }
+
+    section.artist .left .bg > p {
+        font-size: 7rem;
+    }
+
+    section.artist .left .bg > p.sensivity {
+        bottom: -1rem;
+    }
+    
+    section.artist .right {
+        width: 55%;
+        display: flex;
+        /* padding: 5rem 3rem; */
+    }
+
+    section.artist .left {
+        width: 45%;
+        padding: 2rem 0rem;
+    }
+
+    section.buy-ticket a h2 {
+        font-size: 5rem;
+    }
+
+    section.buy-ticket a .bottom .arrow .line {
+        width: 5rem;
+    }
+    
+    section.buy-ticket a .bottom .arrow .right {
+        height: 3rem;
+        width: 3rem;
+    }
+}

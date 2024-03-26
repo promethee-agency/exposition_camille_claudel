@@ -1,0 +1,120 @@
+:root {
+    /* COLORS */
+
+    /* base */
+    --base-0: #ffffff;
+    --base-50: #fffbf0;
+    --base-950: #040618;
+
+    /*  winter */
+    --winter-50: #f3f6fa;
+    --winter-100: #e9f0f6;
+    --winter-200: #d6e3ef;
+    --winter-300: #bdd1e4;
+    --winter-400: #9ab2d4;
+    --winter-500: #8aa0ca;
+    --winter-600: #7285b9;
+    --winter-700: #6070a2;
+    --winter-800: #505d83;
+    --winter-900: #45506a;
+    --winter-950: #282d3e;    
+
+    /*  spring */
+    --spring-50: #fdf3f3;
+    --spring-100: #fbe5e5;
+    --spring-200: #f8d0d0;
+    --spring-300: #f2afaf;
+    --spring-400: #e98080;
+    --spring-500: #dc5757;
+    --spring-600: #c83a3a;
+    --spring-700: #a82d2d;
+    --spring-800: #8b2929;
+    --spring-900: #742828;
+    --spring-950: #3e1111;    
+
+    /*  summer */
+    --summer-50: #f2f7f3;
+    --summer-100: #dfece0;
+    --summer-200: #c0dac5;
+    --summer-300: #96bfa1;
+    --summer-400: #7dab8a;
+    --summer-500: #48815a;
+    --summer-600: #356646;
+    --summer-700: #2b5139;
+    --summer-800: #24412f;
+    --summer-900: #1e3628;
+    --summer-950: #101e16;
+
+     /*  autumn */
+     --autumn-50: #fef5ee;
+     --autumn-100: #fce8d8;
+     --autumn-200: #f7ceb1;
+     --autumn-300: #f2aa7f;
+     --autumn-400: #eb7843;
+     --autumn-500: #e75c28;
+     --autumn-600: #d8451e;
+     --autumn-700: #b4321a;
+     --autumn-800: #8f2a1d;
+     --autumn-900: #74251a;
+     --autumn-950: #3e100c;
+
+
+    /* FONTS */
+
+    /* sizes */
+    --text-base: .875rem; /* p */
+    --text-lg: 1rem; /* h6 */
+    --text-xl: 1.125rem; /* h5 */
+    --text-2xl: 1.25rem; /* h4 */
+    --text-3xl: 1.5rem; /* h3 */
+    --text-4xl: 1.875rem; /* h2 */
+    --text-5xl: 2.25rem; /* h1 */
+
+
+    /* PADDINGS */
+
+    /* glutter */
+    --glutter-normal: 1rem;
+}
+
+@media (min-width: 40rem) {
+    :root {
+        /* PADDINGS */
+
+        /* glutter */
+        --glutter-normal: 2.5rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    :root {
+        /* FONTS */
+
+        /* sizes */
+        --text-base: 1rem; /* p */
+        --text-lg: 1.125rem; /* h6 */
+        --text-xl: 1.25rem; /* h5 */
+        --text-2xl: 1.5rem; /* h4 */
+        --text-3xl: 1.875rem; /* h3 */
+        --text-4xl: 2.25rem; /* h2 */
+        --text-5xl: 3rem; /* h1 */
+
+
+        /* PADDINGS */
+
+        /* glutter */
+        --glutter-normal: 5rem;
+    }
+}
+
+@media (min-width: 64rem) {
+
+}
+
+@media (min-width: 80rem) {
+
+}
+
+@media (min-width: 96rem) {
+
+}

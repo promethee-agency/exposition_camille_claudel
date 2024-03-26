@@ -1,0 +1,171 @@
+/* COUNTDOWN SECTION */
+section.countdown {
+    margin-top: 6rem;
+    padding: 5rem var(--glutter-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+section.countdown h1 {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    text-align: center;
+}
+
+section.countdown .counter {
+    display: flex;
+    gap: 1.5rem;
+}
+
+section.countdown .counter .unit {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    align-items: center;
+}
+
+section.countdown .counter .unit .number {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-950);
+}
+
+/* TICKET SECTION */
+section.tickets {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0rem var(--glutter-normal);
+}
+
+section.tickets .ticket {
+    border: solid .125rem var(--base-950);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section.tickets .ticket .image {
+    max-width: 23rem;
+}
+
+section.tickets .ticket img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+section.tickets .ticket .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+section.tickets h2 {
+    font-size: var(--text-3xl);
+    font-weight: 500;
+}
+
+section.tickets h2 span.alternative-font {
+    font-family: 'Mazius';
+    font-style: italic;
+}
+
+section.tickets .ticket .infos .details {
+    border: solid .125rem var(--base-950);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+section.tickets .ticket .infos .details.spring {
+    background-color: var(--spring-200);
+}
+
+section.tickets .ticket .infos .details.summer {
+    background-color: var(--summer-200);
+}
+
+section.tickets .ticket .infos .details.autumn {
+    background-color: var(--autumn-200);
+}
+
+section.tickets .ticket .infos .details.winter {
+    background-color: var(--winter-200);
+}
+
+
+
+section.tickets .ticket .infos .details .people > div:first-child {
+    display: flex;
+    gap: 1rem;
+}
+
+section.tickets .ticket .infos .details .people {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.tickets .ticket .infos .details .people > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+section.tickets .ticket .infos .details .exhibit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+}
+
+section.tickets .ticket .infos .details .exhibit .dates p {
+    font-weight: 600;
+    font-size: var(--text-lg);
+    padding-bottom: 0.2rem;
+}
+
+
+/* MEDIAS QUERIES */
+
+/* above 640px */
+@media (min-width: 40rem) {
+    section.countdown .counter {
+        gap: 4rem;
+    }
+    
+    section.countdown .counter .unit .number {
+        font-size: 4rem;
+    }
+
+    section.tickets .ticket {
+        flex-direction: row;
+        gap:2rem;
+    }
+
+    section.tickets .ticket .infos {
+        width: 70%;
+    }
+
+    section.tickets .ticket .image {
+        width: 30%;
+    }
+    
+    section.tickets {
+        padding: 0rem calc(var(--glutter-normal) *1.5);
+    }
+}
+
+/* above 1024px */
+@media (min-width: 64rem) {
+    section.countdown .counter .unit .number {
+        font-size: 6rem;
+    }
+}

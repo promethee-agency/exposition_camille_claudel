@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}store.create.page-title{% endtrans %}{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('styles/store/create.css') }}">
+{% endblock %}
+
+{% block main %}
+<section class="create">
+    <h2>Achat billet</h2>
+
+    {{ form_start(form) }}
+        <section class="date-hours" id="date-horaire">
+            <h3>Date et horaire</h3>
+            <fieldset class="date">
+                <legend><h3>Date</h3></legend>
+                <div id="calendar" aria-disabled="true"></div>
+            </fieldset>
+            <fieldset class="hours">
+                <legend><h3>Heure</h3></legend>
+                {{ form_row(form.hours) }}
+            </fieldset>
+        </section>
+
+        <section class="categories" id="categories">
+            <h3>Catégorie</h3>
+        {% for category in categories %}
+            <fieldset data-category="{{ category.id }}">
+                <legend>
+                    <h4>{{ ('store.categories.' ~ category.name)|trans }}</h4>
+                </legend>
+                <p>{{ category.price ~ '€' }}</p>
+                <div class="controls">
+                    <button type="button" data-action="remove" class="remove">-</button>
+                    <input type="number" id="{{ 'counter_' ~ category.id }}" value="0" readonly>
+                    <button type="button" data-action="add" class="add">+</button>
+                </div>
+                <div class="tickets"></div>
+            </fieldset>
+        {% endfor %}
+        </section>
+
+        <section class="sumarry" id="resume"></section>
+        <span data-ticket-per-reservation="{{ exhibition.ticketPerReservation }}"></span>
+    {{ form_end(form) }}
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ asset('scripts/store/create/form.js') }}"></script>
+<script src="{{ asset('scripts/store/create/calendar.js') }}"></script>
+{% endblock %}

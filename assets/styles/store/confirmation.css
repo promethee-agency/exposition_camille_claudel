@@ -1,0 +1,78 @@
+main {
+    margin-top: 8rem;
+    padding: 0rem var(--glutter-normal);
+}
+
+main > h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main .container .combined-logo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+ 
+main .container .combined-logo .logo-container {
+    position: relative;
+}
+ 
+main .container .combined-logo img.logo {
+    width: 10rem;
+    margin: auto;
+    z-index: 1;
+}
+ 
+main .container .combined-logo img.oeil {
+    position: absolute;
+    width: 1.5rem;
+    top: 45%;
+    right: 3%;
+    transform: translateY(-45%) translateX(-3%);
+}
+
+main .container > p {
+    max-width: 50ch;
+    line-height: 1.3;
+}
+
+main .container > a {
+    padding: .7rem 2rem;
+    border-radius: 5rem;
+}
+
+/* MEDIAS QUERIES */
+
+/* above 640px */
+@media (min-width: 40rem) {
+    main {
+        margin-top: 10rem;
+    }
+
+    main .container {
+        gap: 3rem;
+    }
+
+    main .container .combined-logo img.logo {
+        width: 15rem;
+        margin: auto;
+        z-index: 1;
+    }
+     
+    main .container .combined-logo img.oeil {
+        position: absolute;
+        width: 3rem;
+        top: 45%;
+        right: 3%;
+        transform: translateY(-45%) translateX(-3%);
+    }
+}

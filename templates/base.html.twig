@@ -2,9 +2,25 @@
 <html lang="{{ app.locale }}">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="canonical" href="{{ url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}">
+
         <title>{% block title %}Camille Claudel{% endblock %} - {{ site_name }}</title>
 
-        <link rel="shortcut icon" href="{{ absolute_url('favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ app.request.getSchemeAndHttpHost() ~ '/favicon.ico' }}">
+
+        <link rel="stylesheet" href="{{ asset('styles/_commons/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/_commons/primitives.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/_commons/tokens.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/_commons/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/_commons/accessibility.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/_commons/header.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/_commons/footer.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/_commons/components.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('fonts/satoshi/fonts.css') }}">
+        <link rel="stylesheet" href="{{ asset('fonts/mazius/fonts.css') }}">
 
         {% block stylesheets %}
         {% endblock %}
@@ -14,6 +30,14 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="container">
+            {% include '_commons/header.html.twig' %}
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+            {% include '_commons/footer.html.twig' %}
+        </div>
+
+        {% block scripts %}{% endblock %}
     </body>
 </html>

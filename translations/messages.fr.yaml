@@ -1,0 +1,99 @@
+_commons:
+    winter: Hiver
+    spring: Printemps
+    summer: Été
+    autumn: Automne
+
+home:
+    splash:
+        travel: VOYAGEZ
+        home: CHEZ VOUS
+        visit: VISITEZ
+
+    top:
+        the-art: L'ART
+        4-times: EN 4 TEMPS
+        scroll: faites défiler
+
+    exhibition:
+        bg:
+            listen: ÉCOUTEZ
+            discover: DÉCOUVREZ
+            learn: APPRENEZ
+        left:
+            art-in-4: l'art en 4 temps
+            immerse: "Plongez dans l’expérience immersive “Camille Claudel: l’Art en 4 temps” consacrée à cette sculptrice visionnaire du XIXe siècle. À travers des décors changeant en fonction de la saison, découvrez ou redécouvrez l'univers intime et captivant de l'une des artistes les plus talentueuses de son époque. Laissez-vous surprendre par la beauté de ce qui vous entoure."
+            create-yours: Créez votre expérience
+        scroll: Faites défiler
+
+    concept:
+        title:
+            live: VIVEZ
+            yours: VOTRE
+            own: PROPRE
+            experience: EXPERIENCE
+        details:
+            event: Événement
+            dates: Du 1er janvier 2024, au 31 décembre 2024
+            prices:
+                title: Tarifs
+                title-sr: Tarif selon l'âge
+                category: Catégorie d'âge
+                price: Prix
+                minus-18: "-18 ans :"
+                free: gratuit
+                reduced-price: "Tarif réduit :"
+                6-euros: 6€
+                full-price: "Plein tarif :"
+                10-euros: 10€
+            hours: Horaires
+            time-slot: Tous les jours de 9h à 20h
+
+    countdown:
+        next: PROCHAINE
+        season: SAISON
+        counter:
+            days: JOURS
+            hours: HEURES
+            minutes: MINUTES
+            seconds: SECONDES
+
+    artist:
+        left:
+            strength: FORCE
+            sensivity: SENSIBILITÉ
+            about:
+                title: À propos
+                text: Découvrez les créations intemporelles de Camille Claudel sur notre site et laissez-vous inspirer par son génie artistique.
+        right: Née en 1864 en France, Camille Claudel est reconnue comme une sculptrice visionnaire du XIXe siècle, dont l'héritage artistique marie habilement la force brute à une sensibilité délicate. Formée à l'École des Beaux-Arts de Paris, son style unique et son expression artistique l'ont rapidement distinguée dans le milieu artistique. Malgré l'influence notable d'Auguste Rodin, son mentor et amant, elle a su forger une carrière remarquable, continuant d'inspirer les amateurs d'art à travers le monde.
+
+    seasons:
+        to-each: À chacun sa saison
+        cards:
+            winter: En hiver, profitez de la neige et des illuminations venant embellir les sublimes lieux dans lesquels a évolué Camille Claudel.
+            spring: Au printemps, les bourgeons fleurissent, la vie reprend. Quel excellent moment pour découvrir les lieux dans lesquels a évolué Camille Claudel.
+            summer: En été, la chaleur et le soleil vous embarque dans un voygage pour découvrir les lieux emblématiques dans lesquels a évolué Camille Claudel.
+            autumn: Les couleurs automnales peignent un tableau saisissant des lieux dans lesquels a évolué Camille Claudel. Ils n’attendent plus que vous pour les découvrir !
+    
+    buy-ticket:
+        get: OBTENEZ VOS
+        access: ENTRÉES EN
+        click: SEULEMENT UN CLIC
+    
+    questions:
+        learn-more: En savoir plus
+        duration:
+            question: Combien de temps dure la visite ?
+            answer: La visite est auto-guidée pour que vous puissiez y passer le temps que vous souhaitez. La durée moyenne est de 25 minutes.
+        access:
+            question: J’ai mon billet, comment accéder à l’expo ?
+            answer: Vous achetez un billet pour une date et horaire prévu. Vous devez donc accéder a la section “Expo Interactive” à la date et l’heure indiquée sur votre billet avec le code de réservation (que vous avez reçu par mail lors de l’achat de votre ticket) et votre adresse mail.
+        date:
+            question: Est ce que je peux changer la date/heure après mon achat ?
+            answer: Non, selon nos conditions générales de vente les billets ne sont ni repris, ni échangés, ni remboursés.
+
+store:
+    categories:
+        full: Plein tarif
+        student: Tarif étudiant
+        minus18: Gratuit -18 ans

@@ -1,0 +1,11 @@
+/* BUTTON  */
+.btn {
+    background-color: var(--primary-600);
+    color: var(--base-50);
+    border-radius: 5rem;
+    transition: background-color ease-out .3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-900);
+}

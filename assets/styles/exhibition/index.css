@@ -1,0 +1,153 @@
+div.connexion {
+    margin-top: 8rem;
+}
+
+div.connexion h1 {
+    font-size: var(--text-4xl);
+    font-weight: normal;
+}
+
+div.connexion {
+    height: 80svh;
+    width: 100%;
+    margin-left: auto;
+    background-image: url(../../images/exhibition/bg-connect.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.connexion .bloc-connect {
+    background-color: var(--base-50);
+    height: 100%;
+    display: none;
+}
+
+div.connexion .bloc-connect > div {
+    display: flex;
+    flex-direction: column;
+}
+
+div.connexion .bloc-connect > div  p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    transform-origin: center;
+    padding: 2rem .5rem;
+    font-weight: 500;
+}
+
+div.connexion .form {
+    background-color: var(--base-50);
+    padding: 1.5rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 25rem;
+}
+
+div.connexion .form .buttons {
+    display: flex;
+    padding: .4rem;
+    border: solid .125rem var(--base-950);
+    width: 100%;
+}
+
+div.connexion .form .buttons > div {
+    width: 50%;
+}
+
+div.connexion .form .buttons .button input[type="radio"]:checked + label {
+    background-color: var(--base-950);
+    color: var(--base-0);
+}
+
+div.connexion .form .buttons label {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+div.connexion .form h1 span.alternative-font {
+    color: var(--primary-700);
+    font-family: 'Mazius';
+    font-style: italic;
+}
+
+div.connexion .form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+div.connexion .form form .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+div.connexion .form form .infos > div {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+div.connexion .form form .infos .name-last-name > div {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 45%;
+}
+
+div.connexion .form form .infos .name-last-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.connexion .form form .infos > div input {
+    border: solid 1px var(--base-950);
+    background-color: var(--base-50);
+    padding: .8rem;
+}
+
+div.connexion .form form a {
+    font-size: var(--text-base);
+    color: var(--base-950);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+div.connexion .form form input[type="submit"] {
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    margin-left: auto;
+}
+
+div.connexion .form .wrapper .sign-up {
+    display: none;
+}
+
+
+
+
+
+/* MEDIAS QUERIES */
+
+/* above 640px */
+@media (min-width: 40rem) {
+    div.connexion {
+        margin-top: 8rem;
+        width: 90%;
+    }
+
+    div.connexion .bloc-connect {
+        display: block;
+    }
+
+}

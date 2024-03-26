@@ -1,0 +1,11 @@
+<header>
+    <nav role="navigation" aria-label="{% trans from 'commons' %}header.main-menu{% endtrans %}">
+        <ul>
+            <li><a href="{{ path('home.index') }}" {% if app.request.get('_route') starts with 'home' %}class="selected" aria-current="page"{% endif %}>{% trans from 'commons' %}header.home{% endtrans %}</a></li>
+            <li><a href="{{ path('exhibition.index') }}" {% if app.request.get('_route') starts with 'exhibition' %}class="selected" aria-current="page"{% endif %}>{% trans from 'commons' %}header.exhibition{% endtrans %}</a></li>
+            <li class="logo"><a href="{{ path('home.index') }}" tabindex="-1"><img src="{{ asset('images/_commons/logos/logo.svg') }}" alt=""><span class="sr-only">{% trans from 'commons' %}header.home{% endtrans %}</span></a></li>
+            <li><a href="https://promethee.agency/">{% trans from 'commons' %}header.agency{% endtrans %}</a></li>
+            <li><a href="{{ path('store.create') }}" {% if app.request.get('_route') starts with 'store' %}class="btn ticket selected" aria-current="page"{% else %}class="btn ticket"{% endif %}>{% trans from 'commons' %}header.store{% endtrans %}</a></li>
+        </ul>
+    </nav>
+</header>

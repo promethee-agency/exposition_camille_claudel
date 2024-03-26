@@ -1,0 +1,99 @@
+_commons:
+    winter: Winter
+    spring: Spring
+    summer: Summer
+    autumn: Autumn
+
+home:
+    splash:
+        travel: TRAVEL
+        home: HOME
+        visit: VISIT
+
+    top:
+        the-art: ART
+        4-times: IN 4 TIMES
+        scroll: scroll
+
+    exhibition:
+        bg:
+            listen: LISTEN
+            discover: DISCOVER
+            learn: LEARN
+        left:
+            art-in-4: art in 4 times
+            immerse: "Immerse yourself in the immersive experience “Camille Claudel: Art in 4 times” dedicated to this visionary sculptor of the 19th century. Through settings changing with the seasons, discover or rediscover the intimate and captivating universe of one of the most talented artists of her time. Let yourself be amazed by the beauty that surrounds you."
+            create-yours: Live your own experience
+        scroll: Scroll
+
+    concept:
+        title:
+            live: LIVE
+            yours: YOUR
+            own: OWN
+            experience: EXPERIENCE
+        details:
+            event: Event
+            dates: From January 1, 2024, to December 31, 2024
+            prices:
+                title: Prices
+                title-sr: Price by age category
+                category: Age category
+                price: Price
+                minus-18: "-18 years old :"
+                free: Free
+                reduced-price: "Reduced price :"
+                6-euros: €6
+                full-price: "Full price :"
+                10-euros: €10
+            hours: Hours
+            time-slot: Every day from 9am to 8pm
+
+    countdown:
+        next: NEXT
+        season: SEASON
+        counter:
+            days: DAYS
+            hours: HOURS
+            minutes: MINUTES
+            seconds: SECONDS
+
+    artist:
+        left:
+            strength: STRENGTH
+            sensivity: SENSITIVITY
+            about:
+                title: About
+                text: Discover the timeless creations of Camille Claudel on our site and be inspired by her artistic genius.
+        right: Born in 1864 in France, Camille Claudel is recognized as a visionary sculptor of the 19th century, whose artistic legacy skillfully combines raw strength with delicate sensitivity. Trained at the École des Beaux-Arts in Paris, her unique style and artistic expression quickly distinguished her in the art world. Despite the notable influence of Auguste Rodin, her mentor and lover, she managed to forge a remarkable career, continuing to inspire art enthusiasts around the world.
+
+    seasons:
+        to-each: To each their season
+        cards:
+            winter: In winter, enjoy the snow and the illuminations embellishing the sublime places where Camille Claudel evolved.
+            spring: In spring, buds bloom, life resumes. What an excellent time to discover the places where Camille Claudel evolved.
+            summer: In summer, the heat and the sun take you on a journey to discover the emblematic places where Camille Claudel evolved.
+            autumn: The autumn colors paint a striking picture of the places where Camille Claudel evolved. They are waiting for you to discover them!
+
+    buy-ticket:
+        get: GET YOUR
+        access: ACCESS TO
+        click: JUST A CLICK
+
+    questions:
+        learn-more: Learn more
+        duration:
+            question: How long does the visit last?
+            answer: The visit is self-guided so you can spend as much time as you want. The average duration is 25 minutes.
+        access:
+            question: I have my ticket, how do I access the exhibition?
+            answer: You purchase a ticket for a scheduled date and time. You must therefore access the "Interactive Expo" section on the date and time indicated on your ticket with the booking code (which you received by email when purchasing your ticket) and your email address.
+        date:
+            question: Can I change the date/time after my purchase?
+            answer: No, according to our general terms and conditions of sale, tickets are neither taken back, nor exchanged, nor refunded.
+
+store:
+    categories:
+        full: Full price
+        student: Student price
+        minus18: Free -18 years old

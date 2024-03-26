@@ -5,3 +5,4 @@ framework:
         fallbacks:
             - fr
         providers:
+    # enabled_locales: ['fr', 'en']
