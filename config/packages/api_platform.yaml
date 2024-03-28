@@ -1,6 +1,7 @@
 api_platform:
-    title: Hello API Platform
-    version: 1.0.0
+    title: ProAPI - Prométhée API
+    version: 1.0.2
+    show_webby: false
     formats:
         jsonld: ['application/ld+json']
     docs_formats:

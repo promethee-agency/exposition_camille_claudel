@@ -1,5 +1,19 @@
 header:
+    main-menu: Menu principal
     home: Accueil
     exhibition: Expo interactive
     agency: L'agence
     store: Billeterie
+
+footer: 
+    home: Accueil
+    exhibition: Expo interactive
+    agency: L'agence
+    store: Billeterie
+    login: Se connecter
+    logout: Se déconnecter
+    insta: Instragram de Prométhée Agency
+    tik-tok: Tik Tok de Prométhée Agency
+    cgv: Conditions générales de vente
+    legal: Mentions légales
+    rights: Prométhée ©

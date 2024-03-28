@@ -14,9 +14,9 @@ class RedirectController extends AbstractController
         $supportedLocales = explode('|', $this->getParameter('app.supported_locales'));
 
         if (in_array($userLocale, $supportedLocales)) {
-            return $this->redirectToRoute('home', ['_locale' => $userLocale], 301);
+            return $this->redirectToRoute('home.index', ['_locale' => $userLocale], 301);
         } else {
-            return $this->redirectToRoute('home', status: 301);
+            return $this->redirectToRoute('home.index', status: 301);
         }
     }
 }

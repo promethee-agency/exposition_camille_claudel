@@ -49,11 +49,11 @@ class StoreController extends AbstractController
                     $ticket->setUser($dbUser);
                 }
             }
-            
+
             $entityManager->persist($reservation);
             $entityManager->flush();
 
-            return $this->render('base.html.twig');
+            return $this->render('store/confirmation.html.twig');
         }
 
         return $this->render('store/create.html.twig', [

@@ -23,7 +23,7 @@ home:
         left:
             art-in-4: l'art en 4 temps
             immerse: "Plongez dans l’expérience immersive “Camille Claudel: l’Art en 4 temps” consacrée à cette sculptrice visionnaire du XIXe siècle. À travers des décors changeant en fonction de la saison, découvrez ou redécouvrez l'univers intime et captivant de l'une des artistes les plus talentueuses de son époque. Laissez-vous surprendre par la beauté de ce qui vous entoure."
-            create-yours: Créez votre expérience
+            create-yours: Vivez votre propre expérience
         scroll: Faites défiler
 
     concept:
@@ -93,7 +93,87 @@ home:
             answer: Non, selon nos conditions générales de vente les billets ne sont ni repris, ni échangés, ni remboursés.
 
 store:
+    create:
+        page-title: Billeterie
+
+    title: ACHAT BILLET
+
+    nav:
+        dates: "Dates &amp; horraires"
+        tickets: Nombre de billets
+        pay: Paiement
+    
+    form:
+        dates: Dates
+        hours: "&amp; horraires"
+        error: Veuillez sélectionner une date et une heure
+        choose-date: Choisissez une date
+        choose-hour: Choisissez une heure
+        button-validate: Validez   
+        number: Nombre
+        tickets: de billets
+        max-ticket: Vous pouvez acheter 5 billets maximum
+        btn-payment: Passer au paiement
+    
     categories:
         full: Plein tarif
         student: Tarif étudiant
         minus18: Gratuit -18 ans
+    
+    recap:
+        title-vr: Embarquez pour l'exposition
+        title-expo: Camille Claudel, l'art en 4 temps
+        total: Total
+    
+    sr-only:
+        title: Récapitulatif du prix à payer selon la catégorie réservée
+        category: Catégorie
+        price: Prix
+
+    sell-conditions:
+        fields-required: Tous les champs sont obligatoires.
+        conditions: "Veuillez noter que les billets ne sont pas sujets à échange, conformément à nos conditions générales de vente.Pour toute question ou besoin d'assistance, n'hésitez pas à nous contacter à l'adresse suivante :"
+
+    confirmation:
+        page-title: Merci
+        title: Merci pour votre réservation !
+        text: Vous recevrez par mail tous les détails de votre réservation ainsi qu'un code de réservation pour vous connecter dans la partie exposition interractive à l'heure et date écrite sur votre billet.
+        btn-home: Retourner à l'accueil
+
+exhibition:
+    page-title: Exposition
+    
+    splash:
+        next: Passer le tutoriel
+
+    tuto:
+        title-live: VIVEZ VOTRE PROPRE
+        title-experience: EXPERIENCE
+        text: "Plongez dans l’expérience immersive “Camille Claudel: l’Art en 4 temps” consacrée à cette sculptrice visionnaire du XIXe siècle. À travers cette exposition, découvrez ou redécouvrez l'univers intime et captivant de l'une des artistes les plus talentueuses de son époque. Malgré être resté dans l’ombre de son maître, Camille Claudel a su développer une carrière remarquable en son propre nom. Du génie à la folie, laissez-vous maintenant emporter par les 4 étapes marquantes qui ont sculpté sa vie !"
+        legend: Tutoriel d'utilisation du dispositif interractif
+
+    wait:
+        page-title: Attente pour l'exposition
+
+        counter:
+            title: VOTRE PROCHAINE EXPERIENCE
+            days: JOURS
+            hours: HEURES
+            minutes: MINUTES
+            seconds: SECONDES
+
+        ticket:
+            title: l'art en 4 temps
+
+dashboard:
+    title: Tableau de bord
+    tickets-month: Tickets (mois)
+    reservation-month: Réservations (mois)
+    gains-year: Gains (année)
+    average-reservation: Moyenne réservations
+    last-tickets: Les 3 derniers tickets
+
+    form:
+        last-name: Nom
+        name: Prénom
+        category: Catégorie

@@ -1,10 +1,63 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('styles/security/login.css') }}">
+{% endblock %}
 
 {% block main %}
-    <br><br><br><br><br><br>
-    {% for flash_error in app.flashes('verify_email_error') %}
+<div class="connexion">
+
+    <div class="bloc-connect">
+        <div>
+            <p>{% trans from 'security' %}_commons.bloc-connect{% endtrans %}</p>
+            <p>{% trans from 'security' %}_commons.bloc-connect{% endtrans %}</p>
+            <p>{% trans from 'security' %}_commons.bloc-connect{% endtrans %}</p>
+        </div>
+    </div>
+
+    <div class="form">
+        <h1>{% trans from 'security' %}register.form.title{% endtrans %}</h1>
+
+        <nav class="login-selector" role="navigation" aria-label="Menu secondaire">
+            <a {% if app.request.get('_route') starts with 'app.login' %}class="selected" aria-current="page"{% endif %} href="{{ path('app.login') }}">{% trans from 'security' %}_commons.nav.login{% endtrans %}</a>
+            <a {% if app.request.get('_route') starts with 'app.register' %}class="selected" aria-current="page"{% endif %} href="{{ path('app.register') }}">{% trans from 'security' %}_commons.nav.register{% endtrans %}</a>
+        </nav>
+
+        <div class="wrapper">
+            <div class="sign-up">
+                    
+            {{ form_start(registrationForm) }}
+                <div class="infos">
+                    <div class="name-last-name">
+                        {{ form_row(registrationForm.lastName) }}
+                        {{ form_row(registrationForm.firstName) }}
+                    </div>
+
+                    {{ form_row(registrationForm.email) }}
+
+                    {{ form_row(registrationForm.plainPassword) }}
+
+                    <input class="btn" type="submit" value="{% trans from 'security' %}register.form.register{% endtrans %}">
+                </div>
+                <div class="message-box">
+                    {% for flash_error in app.flashes('verify_email_error') %}
+                        <div class="alert">
+                            {{ flash_error }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {{ form_end(registrationForm) }}
+
+            </div>
+        </div>  
+    </div>
+</div>
+
+
+
+    {# {% for flash_error in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
     {% endfor %}
 
@@ -20,5 +73,5 @@
         {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+    {{ form_end(registrationForm) }} #}
 {% endblock %}

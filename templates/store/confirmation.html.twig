@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}store.confirmation.page-title{% endtrans %}{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('styles/store/confirmation.css') }}">
+{% endblock %}
+
+{% block main %}
+ <h1>{% trans %}store.confirmation.title{% endtrans %}</h1>
+
+    <div class="container">
+        <div class="combined-logo" id="logoContainer">
+            <div class="logo-container">
+                <img class="logo" src="{{ asset('images/store/logo.svg') }}" alt="">
+                <img class="oeil" src="{{ asset('images/store/oeil.svg') }}" alt="">
+            </div>
+        </div>
+
+        <p>{% trans %}store.confirmation.text{% endtrans %} </p>
+        
+        <a class="btn" href="{{ path('home.index') }}">{% trans %}store.confirmation.btn-home{% endtrans %}</a>
+    </div>
+    
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ asset('scripts/store/oeil.js') }}"></script>
+{% endblock %}

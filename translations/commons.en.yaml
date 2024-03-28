@@ -1,5 +1,19 @@
 header:
+    main-menu: Main menu
     home: Home
     exhibition: Interactive Exhibit
     agency: Agency
     store: Tickets
+
+footer: 
+    home: Home
+    exhibition: Interactive Exhibit
+    agency: Agency
+    store: Tickets
+    login: Login
+    logout: Logout
+    insta: Prométhée Agency'Instagram
+    tik-tok: Prométhée Agency'Tik Tok
+    cgv: Terms and conditions
+    legal: Legal notices
+    rights: Prométhée ©

@@ -1,0 +1,26 @@
+_commons:
+    bloc-connect: Connectez-vous
+    nav: 
+        login: Se connecter
+        register: S'inscrire
+
+register:
+    form:
+        title: Inscription
+        lastName: Nom
+        firstName: Prénom
+        email: Adresse mail 
+        password: Mot de passe
+        register: S'inscrire
+
+login: 
+    form:
+        title: Connexion
+        mail: Adresse mail
+        password: Mot de passe ou code de réservation
+        login: Se connecter
+
+    message-box:
+        name: Vous êtes logué en tant que 
+        logout: Se déconnecter
+        

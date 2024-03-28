@@ -1,1 +1,134 @@
 {% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content %}
+<!-- Main Content -->
+<div id="content">
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+            <h1 class="h3 mb-0 text-gray-800">{% trans %}dashboard.title{% endtrans %}</h1>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row">
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    {% trans %}dashboard.tickets-month{% endtrans %}</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ ticketsThisMonth }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-ticket fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    {% trans %}dashboard.reservation-month{% endtrans %}</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ reservationsThisMonth }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-success h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    {% trans %}dashboard.gains-year{% endtrans %}</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ gainsThisYear }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-euro-sign fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    {% trans %}dashboard.average-reservation{% endtrans %}</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ averageGains }}€</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-basket-shopping fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Row -->
+
+        <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+                <div class="card mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div
+                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">{% trans %}dashboard.last-tickets{% endtrans %}</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <div class="">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">{% trans %}dashboard.form.last-name{% endtrans %}</th>
+                                    <th scope="col">{% trans %}dashboard.form.name{% endtrans %}</th>
+                                    <th scope="col">{% trans %}dashboard.form.category{% endtrans %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for ticket in lastTickets %}
+                                        <tr>
+                                        <th scope="row">{{ ticket.id }}</th>
+                                        <td>{{ ticket.user.lastName }}</td>
+                                        <td>{{ ticket.user.firstName }}</td>
+                                        <td>{{ ('store.categories.' ~ ticket.category.name)|trans }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+{% endblock %}

@@ -2,6 +2,7 @@ twig:
     file_name_pattern: '*.twig'
     globals:
         site_name: 'Prométhée'
+        supported_locales: '%app.supported_locales%'
 
 when@test:
     twig:

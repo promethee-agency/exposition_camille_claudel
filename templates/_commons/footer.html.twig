@@ -1,7 +1,9 @@
 <footer>
     <div class="footer">
         <div class="top">
-            <a href="{{ path('home.index') }}"><img src="{{ asset('images/_commons/footer/black-logo.svg') }}" alt="agence prométhée"></a>
+            <div class="col-1">
+                <a href="{{ path('home.index') }}"><img src="{{ asset('images/_commons/footer/black-logo.svg') }}" alt="agence prométhée"></a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="{{ path('home.index') }}">{% trans from 'commons' %}footer.home{% endtrans %}</a></li>
@@ -14,11 +16,18 @@
                 <div>
                     <p>2 rue Albert Einstein</p>
                     <p>77420, Champs-sur-Marne</p>
+                    <p class="login-out">
+                        {% if app.user %}
+                        <a href="{{ path('app.logout') }}">{% trans from 'commons' %}footer.logout{% endtrans %}</a>
+                        {% else %}
+                        <a href="{{ path('app.login') }}">{% trans from 'commons' %}footer.login{% endtrans %}</a>
+                        {% endif %}
+                    </p>
                 </div>
                 
                 <ul>
                     <li><a href="https://www.instagram.com/promethee.agency"><img src="{{ asset('images/_commons/footer/insta.svg') }}" alt=""><span class="sr-only">{% trans from 'commons' %}footer.insta{% endtrans %}</span></a></li>
-                    <li><a href=""><img src="{{ asset('images/_commons/footer/facebook.svg') }}" alt=""><span class="sr-only">{% trans from 'commons' %}footer.facebook{% endtrans %}</span></a></li>
+                    <li><a href=""><img src="{{ asset('images/_commons/footer/tiktok2.svg') }}" alt=""><span class="sr-only">{% trans from 'commons' %}footer.tik-tok{% endtrans %}</span></a></li>
                 </ul>
             </div>
         </div>
@@ -28,7 +37,7 @@
             <div class="line"></div>
             <a href="">{% trans from 'commons' %}footer.legal{% endtrans %}</a>
             <div class="line"></div>
-            <p>{% trans from 'commons' %}footer.rights{% endtrans %}</p>
+            <p>{% trans from 'commons' %}footer.rights{% endtrans %} {{ 'now' | date('Y') }}</p>
         </div>
         
     </div>

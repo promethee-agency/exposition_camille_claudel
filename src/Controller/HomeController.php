@@ -56,30 +56,4 @@ class HomeController extends AbstractController
     //     // $entityManagerInterface->flush();
     //     return $this->render('home/index.html.twig');
     // }
-
-    #[Route('/test2', name: 'test2')]
-    public function test2(): Response
-    {
-        $reservation = new Reservation();
-
-        $form = $this->createForm(ReservationType::class, $reservation);
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $reservation->setExhibition($exhibition);
-            $reservation->setUser($this->getUser());
-            
-            $entityManager->persist($reservation);
-            $entityManager->flush();
-
-            return $this->render('base.html.twig');
-        }
-
-        return $this->render('store/create.html.twig', [
-            'form' => $form,
-            'exhibition' => $exhibition,
-            'categories' => $categories
-        ]);
-    }
 }

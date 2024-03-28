@@ -1,0 +1,153 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}exhibition.wait.page-title{% endtrans %}{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('styles/exhibition/wait.css') }}">
+{% endblock %}
+
+{% block main %}
+
+{# <section class="countdown">
+    <h1>{% trans %}exhibition.wait.counter.title{% endtrans %}</h1>
+    <div class="counter">
+        <div class="unit">
+            <p class="number">05</p>
+            <p class="mesure">{% trans %}exhibition.wait.counter.days{% endtrans %}</p>
+        </div>
+        <div class="unit">
+            <p class="number">22</p>
+            <p class="mesure">{% trans %}exhibition.wait.counter.hours{% endtrans %}</p>
+        </div>
+        <div class="unit">
+            <p class="number">08</p>
+            <p class="mesure">{% trans %}exhibition.wait.counter.minutes{% endtrans %}</p>
+        </div>
+        <div class="unit">
+            <p class="number">43</p>
+            <p class="mesure">{% trans %}exhibition.wait.counter.seconds{% endtrans %}</p>
+        </div>
+    </div>
+</section> #}
+
+<div style="margin-top: 10rem"></div>
+<h1 style="text-align: center; margin-bottom: 2rem;">{% trans %}exhibition.wait.counter.title{% endtrans %}</h1>
+
+<section class="tickets">
+{% for ticket in tickets %}
+    <div class="ticket {{ ticket.reservation.reservationAt|season }}">
+        <div class="image"></div>
+        <div class="infos">
+            <h2><span class="alternative-font">Camille Claudel,</span> {% trans %}exhibition.wait.ticket.title{% endtrans %}</h2>
+            <div class="details">
+                <div class="people">
+                    <div>
+                        <p>{{ ticket.user.lastName ~ ' ' ~ ticket.user.firstName }}</p>
+                    </div>
+                    <div>
+                        <p>{{ ticket.user.email }}</p>
+                        <p>{{ ticket.code }}</p>
+                    </div>
+                </div>
+
+                <div class="exhibit">
+                    <div class="dates">
+                        <p>{{ ticket.reservation.reservationAt|date('d/m/Y') }}</p>
+                        <p>{# {{ ticket.reservation.reservationAt|date('h') ~ 'h' }} #}16h</p>
+                    </div>
+                    <p>{{ ticket.category.price ~ '€'}}</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+    {# <!-- SUMMER -->
+    <div class="ticket">
+        <div class="image"><img src="{{ asset("images/exhibition/logo-ete.webp") }}" alt=""></div>
+        <div class="infos">
+            <h2><span class="alternative-font">Camille Claudel,</span> {% trans %}exhibition.wait.ticket.title{% endtrans %}</h2>
+            <div class="details summer">
+                <div class="people">
+                    <div>
+                        <p>Jean Michel</p>
+                    </div>
+                    <div>
+                        <p>jean-michel@gmail.com</p>
+                        <p>AB54J</p>
+                    </div>
+                </div>
+
+                <div class="exhibit">
+                    <div class="dates">
+                        <p>28-06-2024</p>
+                        <p>10h</p>
+                    </div>
+                    <p>6€</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTUMN -->
+    <div class="ticket">
+        <div class="image"><img src="{{ asset("images/exhibition/logo-automne.webp") }}" alt=""></div>
+        <div class="infos">
+            <h2><span class="alternative-font">Camille Claudel,</span> {% trans %}exhibition.wait.ticket.title{% endtrans %}</h2>
+            <div class="details autumn">
+                <div class="people">
+                    <div>
+                        <p>Jean Michel</p>
+                    </div>
+                    <div>
+                        <p>jean-michel@gmail.com</p>
+                        <p>AB54J</p>
+                    </div>
+                </div>
+
+                <div class="exhibit">
+                    <div class="dates">
+                        <p>22-03-2024</p>
+                        <p>16h</p>
+                    </div>
+                    <p>6€</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- WINTER -->
+    <div class="ticket">
+        <div class="image"><img src="{{ asset("images/exhibition/logo-hiver.webp") }}" alt=""></div>
+        <div class="infos">
+            <h2><span class="alternative-font">Camille Claudel,</span> {% trans %}exhibition.wait.ticket.title{% endtrans %}</h2>
+            <div class="details winter">
+                <div class="people">
+                    <div>
+                        <p>Jean Michel</p>
+                    </div>
+                    <div>
+                        <p>jean-michel@gmail.com</p>
+                        <p>AB54J</p>
+                    </div>
+                </div>
+
+                <div class="exhibit">
+                    <div class="dates">
+                        <p>22-03-2024</p>
+                        <p>16h</p>
+                    </div>
+                    <p>6€</p>
+                </div>
+                
+            </div>
+        </div>
+    </div> #}
+</section>
+
+
+
+{% endblock %}

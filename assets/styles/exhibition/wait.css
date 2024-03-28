@@ -50,13 +50,29 @@ section.tickets .ticket {
 
 section.tickets .ticket .image {
     max-width: 23rem;
-}
-
-section.tickets .ticket img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section.tickets .ticket.spring .image {
+    background-image: url("../../images/exhibition/logo-printemps.webp");
+}
+
+section.tickets .ticket.summer .image {
+    background-image: url("../../images/exhibition/logo-ete.webp");
+}
+
+section.tickets .ticket.autumn .image {
+    background-image: url("../../images/exhibition/logo-automne.webp");
+}
+
+section.tickets .ticket.winter .image {
+    background-image: url("../../images/exhibition/logo-hiver.webp");
 }
 
 section.tickets .ticket .infos {
@@ -84,19 +100,19 @@ section.tickets .ticket .infos .details {
     height: 100%;
 }
 
-section.tickets .ticket .infos .details.spring {
+section.tickets .ticket.spring .infos .details {
     background-color: var(--spring-200);
 }
 
-section.tickets .ticket .infos .details.summer {
+section.tickets .ticket.summer .infos .details {
     background-color: var(--summer-200);
 }
 
-section.tickets .ticket .infos .details.autumn {
+section.tickets .ticket.autumn .infos .details {
     background-color: var(--autumn-200);
 }
 
-section.tickets .ticket .infos .details.winter {
+section.tickets .ticket.winter .infos .details {
     background-color: var(--winter-200);
 }
 

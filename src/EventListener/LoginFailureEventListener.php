@@ -14,18 +14,9 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 
 final class LoginFailureEventListener
 {
-    private $ticketRepository;
-    private $tokenStorage;
-    private $dispatcher;
-    private $urlGenerator;
-
-    public function __construct(TicketRepository $ticketRepository, TokenStorageInterface $tokenStorage, EventDispatcherInterface $dispatcher, UrlGeneratorInterface $urlGenerator)
-    {
-        $this->ticketRepository = $ticketRepository;
-        $this->tokenStorage = $tokenStorage;
-        $this->dispatcher = $dispatcher;
-        $this->urlGenerator = $urlGenerator;
-    }
+    public function __construct(
+        private TicketRepository $ticketRepository, private TokenStorageInterface $tokenStorage, private EventDispatcherInterface $dispatcher, private UrlGeneratorInterface $urlGenerator
+    ) {}
 
     #[AsEventListener(event: LoginFailureEvent::class)]
     public function onLoginFailureEvent(LoginFailureEvent $event): void

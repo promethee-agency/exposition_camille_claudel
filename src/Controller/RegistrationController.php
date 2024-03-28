@@ -24,7 +24,7 @@ class RegistrationController extends AbstractController
     {
     }
 
-    #[Route('/register', name: 'app.register')]
+    #[Route('/inscription', name: 'app.register')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, Security $security, EntityManagerInterface $entityManager): Response
     {
         $user = new User();
@@ -44,7 +44,7 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
 
             // generate a signed url and email it to the user
-            $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
+            $this->emailVerifier->sendEmailConfirmation('app.verify.email', $user,
                 (new TemplatedEmail())
                     ->from(new Address('no-reply@expo.promethee.agency', 'Prométhée Agency'))
                     ->to($user->getEmail())
@@ -62,7 +62,7 @@ class RegistrationController extends AbstractController
         ]);
     }
 
-    #[Route('/verify/email', name: 'app_verify_email')]
+    #[Route('/verfication/email', name: 'app.verify.email')]
     public function verifyUserEmail(Request $request, TranslatorInterface $translator): Response
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');

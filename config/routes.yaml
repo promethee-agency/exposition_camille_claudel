@@ -8,5 +8,5 @@ controllers:
     type: attribute
 
 redirect:
-   path: /
-   controller: App\Controller\RedirectController::redirectToLocale
+    path: /
+    controller: App\Controller\RedirectController::redirectToLocale

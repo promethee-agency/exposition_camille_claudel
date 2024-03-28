@@ -7,7 +7,7 @@ _commons:
 home:
     splash:
         travel: TRAVEL
-        home: HOME
+        home: AT HOME
         visit: VISIT
 
     top:
@@ -22,7 +22,7 @@ home:
             learn: LEARN
         left:
             art-in-4: art in 4 times
-            immerse: "Immerse yourself in the immersive experience “Camille Claudel: Art in 4 times” dedicated to this visionary sculptor of the 19th century. Through settings changing with the seasons, discover or rediscover the intimate and captivating universe of one of the most talented artists of her time. Let yourself be amazed by the beauty that surrounds you."
+            immerse: "Immerse yourself in the VR exhibition “Camille Claudel: Art in 4 times” dedicated to this visionary sculptor of the 19th century. Through changing settings that depends on the season, discover or rediscover the intimate and captivating universe of one of the most talented artist of her time. Let yourself be amazed by the beauty that surrounds you."
             create-yours: Live your own experience
         scroll: Scroll
 
@@ -43,9 +43,9 @@ home:
                 minus-18: "-18 years old :"
                 free: Free
                 reduced-price: "Reduced price :"
-                6-euros: €6
+                6-euros: 6€
                 full-price: "Full price :"
-                10-euros: €10
+                10-euros: 10€
             hours: Hours
             time-slot: Every day from 9am to 8pm
 
@@ -77,8 +77,8 @@ home:
 
     buy-ticket:
         get: GET YOUR
-        access: ACCESS TO
-        click: JUST A CLICK
+        access: TICKET IN
+        click: ONE CLICK
 
     questions:
         learn-more: Learn more
@@ -93,7 +93,86 @@ home:
             answer: No, according to our general terms and conditions of sale, tickets are neither taken back, nor exchanged, nor refunded.
 
 store:
+    create:
+        page-title: Store
+
+    title: BUY TICKETS
+
+    nav:
+        dates: "Dates &amp; hours"
+        tickets: Tickets number
+        pay: Payment
+    
+    form:
+        dates: Dates
+        hours: "&amp; hours"
+        error: Please select a date and time
+        choose-date: Choose a date
+        choose-hour: Choose an hour
+        button-validate: Validate  
+        number: Number
+        tickets: of tickets
+        max-ticket: You can buy a maximum of 5 tickets
+        btn-payment: Proceed to payment
+    
     categories:
-        full: Full price
-        student: Student price
+        full: Full fare
+        student: Student rate
         minus18: Free -18 years old
+    
+    recap:
+        title-vr: Immerse yourself in the VR exhibition
+        title-expo: Camille Claudel, art in 4 times
+        total: Total
+    
+    sr-only:
+        title: Summary of the price to pay according to the reserved category
+        category: Catégory
+        price: Price
+
+    sell-conditions:
+        fields-required: All fields are required
+        conditions: "Please note that tickets are not subject to exchange, in accordance with our terms and conditions of sale. If you have any questions or require assistance, please do not hesitate to contact us at the following address:"
+
+    confirmation:
+        page-title: Thanks
+        title: Thanks for your reservation
+        text: You will receive by email all the details of your reservation as well as a reservation code to connect to the interactive exhibition section at the time and date written on your ticket.
+        btn-home: Return home
+
+exhibition:
+    page-title: Exhibition
+    
+    splash:
+        next: Skip the tutorial
+
+    tuto:
+        title-live: LIVE YOUR OWN
+        title-experience: EXPERIENCE
+        text: "Immerse yourself in the VR exhibition “Camille Claudel: Art in 4 times” dedicated to this visionary sculptor of the 19th century. Through this exhibition, discover or rediscover the intimate and captivating universe of one of the most talented artists of her time. Despite remaining in the shadow of her master, Camille Claudel was able to develop a remarkable career in her own name. From genius to madness, let yourself now be carried away by the 4 significant stages that shaped his life!"
+        legend: Tutorial for using the interactive device
+    
+    wait:
+        page-title: Waiting time for teh exhibition
+        counter:
+            title: YOUR NEXT TIME TRAVELING
+            days: DAYS
+            hours: HOURS
+            minutes: MINUTES
+            seconds: SECONDS
+
+        ticket:
+            title: art in 4 times
+
+dashboard:
+    title: Dashboard
+    tickets-month: Tickets (month)
+    reservation-month: Reservations (month)
+    gains-year: Gains (year)
+    average-reservation: Average reservations
+    last-tickets: The last 3 tickets
+
+    form:
+        last-name: Last Name
+        name: Name
+        category: Category

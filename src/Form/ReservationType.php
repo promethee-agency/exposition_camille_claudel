@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use function Symfony\Component\Translation\t;
 
 class ReservationType extends AbstractType
 {
@@ -53,7 +54,6 @@ class ReservationType extends AbstractType
                     'label' => false
                 ]
             ])
-            ->add('submit', SubmitType::class)
         ;
     }
 

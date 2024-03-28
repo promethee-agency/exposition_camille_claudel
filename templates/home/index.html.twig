@@ -32,7 +32,8 @@
 
 <section class="motion">
     <video controls muted>
-        <source src="" type="video/mp4" />
+        <source src="{{ asset('videos/home/index/teaser.webm') }}" type="video/webm">
+        <source src="{{ asset('videos/home/index/teaser.mp4') }}" type="video/mp4">
     </video>
 </section>
 
@@ -73,7 +74,7 @@
     <div class="container">
         <div>
             <div class="title">
-                <h2><span class="alternative-font">{% trans %}home.concept.title.live{% endtrans %}</span>{% trans %}home.concept.title.yours{% endtrans %} </h2>
+                <h2><span class="alternative-font">{% trans %}home.concept.title.live{% endtrans %}</span> {% trans %}home.concept.title.yours{% endtrans %}</h2>
                 <div class="line"></div>
             </div>
             <h2>{% trans %}home.concept.title.own{% endtrans %} <span class="alternative-font">{% trans %}home.concept.title.experience{% endtrans %}</span></h2>    

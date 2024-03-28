@@ -1,0 +1,533 @@
+/* FIRST TITLE */
+main > div.title {
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+    padding: 0 var(--glutter-normal);
+    gap: 1rem;
+}
+
+main .title h1 {
+    color: var(--primary-950);
+}
+
+main .title .line {
+    width: 3rem;
+    height: 0.5rem;
+    background-color: var(--primary-950);
+}
+
+
+/* SECONDARY NAVIGATION */
+main nav.stepper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 2rem var(--glutter-normal) 1.5rem var(--glutter-normal);
+    flex-wrap: wrap;
+}
+
+main nav.stepper button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-950);
+background-color: transparent;
+    border: none;
+}
+
+main nav.stepper button > div.step {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--primary-950);
+    border-radius: 0.3rem;
+    color: var(--primary-950);
+}
+
+main nav.stepper button p.current {
+    font-weight: bold;
+}
+
+main nav.stepper button > div.step.check {
+    color: var(--primary-50);
+}
+
+main nav.stepper button > div.step.check {
+    background-color: var(--primary-950);
+}
+
+/* FORM AND RECAP TICKET */
+.form-recap {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0rem var(--glutter-normal);
+}
+
+
+/* FORMS RESERVATION */
+section.create {
+    width: 100%;
+}
+
+/* section.create form {
+    display: flex;
+} */
+
+section.create h3{
+    font-size: var(--text-lg);
+    margin: 1rem 0rem;
+}
+
+/* DATES */
+section.create h2 {
+    color: var(--primary-950);
+}
+
+section.create h2 span.alternative-font {
+    font-family: 'Mazius';
+    font-style: italic;
+}
+
+section.create .date .error {
+    display:none;
+}
+
+section.create .date .error.active {
+    display:block;
+}
+
+section.create .date-hours.active {
+    display: block;
+}
+
+section.create .date-hours {
+    display: none;
+}
+
+section.create .date-hours .date {
+    width: 30rem;
+}
+
+section.create .date-hours .date #calendar table caption {
+    text-align: left;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+section.create .date-hours .date #calendar table thead th {
+    width: 2rem;
+}
+
+section.create .date-hours .date #calendar table tbody td input[type="radio"] {
+    display: none;
+}
+
+section.create .date-hours .date #calendar table tbody td input[type="radio"]:checked + label {
+    background-color: var(--primary-950);
+    color: var(--primary-50);
+}
+
+section.create .date-hours .date #calendar table tbody td input[type="radio"]:not([disabled]) + label {
+    cursor: pointer;
+}
+
+section.create .date-hours .date #calendar table tbody td input[type="radio"]:not([disabled]):not(:checked) + label:hover {
+    background-color: var(--primary-200);
+}
+
+section.create .date-hours .date #calendar table tbody td input[type="radio"][disabled] + label {
+    /* background-color: var(--primary-50); */
+    text-decoration: line-through;
+    color: rgb(176, 176, 176);
+}
+
+section.create .date-hours .date #calendar table tbody td label {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+section.create .date-hours .date #calendar {
+    display: flex;
+    width: 30rem;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    height: 100%;
+    white-space: nowrap;
+}
+
+section.create .date-hours .date #calendar .month-container {
+    scroll-snap-align: center;
+    flex:0 0 100%;
+}
+
+section.create .date-hours .date #calendar table {
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    scroll-snap-align: center;
+    width: 100%;
+}
+
+section.create .date-hours .date .arrows {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section.create .date-hours .date .arrows button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.create .date-hours .date .arrows button.right {
+    rotate: 180deg;
+}
+
+section.create .date-hours .date .arrows button svg{
+    fill:var(--primary-950)
+}
+
+/* HOURS */
+section.create .date-hours .hours #reservation_hours {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+section.create .date-hours .hours input[type="radio"] {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+section.create .date-hours .hours #reservation_hours input[type="radio"] + label {
+    border: solid .080rem var(--primary-950);
+}
+
+section.create .date-hours .hours #reservation_hours input[type="radio"]:checked + label {
+    background-color: var(--primary-950);
+    color: var(--primary-50);
+}
+
+section.create .date-hours .hours #reservation_hours label {
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-next {
+    text-align: right;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    display: block;
+    margin-left: auto;
+}
+
+/* .btn-next:hover {
+    background-color: var(--primary-950);
+} */
+
+section.create section.categories {
+    display: none;
+}
+
+section.create section.categories.active {
+    display: block;
+}
+
+section.create section.sumarry {
+    display: none;
+}
+
+/* J'AI UN PROBLEME AVEC MON BOUTON SUBMIT */
+/* section.create button[type="submit"] {
+    display: none;
+} */
+
+
+/* CATEGORIES SECTION */
+/* section.categories.active {
+    display: block;
+} */
+
+section.categories .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    /* max-width: 30rem; */
+}
+
+section.categories .container fieldset {
+    width: 100%
+}
+
+section.categories .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px var(--primary-950);
+    padding: 1rem 1rem;
+}
+
+section.categories .price legend {
+    /* display: flex;
+    flex-grow: 1; */
+    align-items: center;
+    gap: 3rem;
+}
+
+section.categories .price .controls {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: var(--text-lg);
+    padding-left: 1rem;
+}
+
+section.categories .price .controls input {
+    background-color: #D9D9D9;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    width: 3.5rem;
+    text-align: center;
+}
+
+section.categories .price .controls button {
+    background-color: transparent;
+    color: var(--primary-950);
+    border: none;
+    font-weight: bold;
+}
+
+section.categories .container .tickets:has(input) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: solid 1px var(--primary-950);
+    border-top: none;
+    padding: 1rem;
+}
+
+section.categories .container .tickets div {
+    display: flex;
+    flex-direction: column;
+}
+
+section.categories .container .tickets > div > div > div:last-of-type {
+    border-bottom: solid 1px var(--primary-950);
+}
+
+section.categories .container .tickets > div:last-of-type > div > div:last-of-type {
+    border-bottom: 0;
+}
+
+section.categories .container .tickets > div > div > div:last-of-type > div {
+    display: grid;
+    grid-template-areas: 
+    "name last-name"
+    "mail mail";
+    column-gap: 1rem;
+}
+
+section.categories .container .tickets > div > div > div:last-of-type > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+section.categories .container .tickets > div > div > div:last-of-type > div > div:nth-of-type(1) {
+    grid-area: name;
+}
+
+section.categories .container .tickets > div > div > div:last-of-type > div > div:nth-of-type(2) {
+    grid-area: last-name;
+}
+
+section.categories .container .tickets > div > div > div:last-of-type > div > div:nth-of-type(3) {
+    grid-area: mail;
+    margin-bottom: 1rem;
+}
+
+section.categories .container .tickets div label {
+    padding-bottom: 0.2rem;
+}
+
+section.categories .container .tickets div input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: solid 0.5px var(--primary-950);
+    background-color: transparent;
+    width: 100%;
+}
+
+/* ANIMATION */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out;
+}
+
+
+
+
+
+/* RECAP TICKET */
+.form-recap .recap .ticket {
+    border: solid 1px var(--primary-950);
+    max-width: 25rem;  /* est ce mieux 30 ou 25rem ? */
+    margin-bottom: 1.5rem;
+}
+
+.form-recap .recap .ticket h2 {
+    font-size: var(--text-2xl);
+    font-family: 'Mazius';
+    font-style: italic;
+    color: var(--primary-950);
+    padding: 1.5rem;
+}
+
+.form-recap .recap .ticket .details {
+    display: flex;
+    border-bottom: solid 2px var(--primary-950);
+    border-top: solid 1px var(--primary-950);
+} 
+
+.form-recap .recap .ticket .details .date{
+    width: 45%;
+    border-right: solid 1px var(--primary-950);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+} 
+
+.form-recap .recap .ticket .details .date h3{
+   font-size: var(--text-lg);
+   color: var(--primary-950);
+}
+
+.form-recap .recap .ticket .details .expo {
+    padding: 1rem;
+}
+
+.form-recap .recap .ticket .details .expo p{
+    color: var(--primary-950);
+}
+
+.form-recap .recap .ticket .details .expo .title{
+    padding-top: 0.5rem;
+    font-weight: bold;
+}
+
+.form-recap .recap .ticket .nb-people {
+    margin-top: 0.5rem;
+    border-top: solid 1px var(--primary-950);
+    padding: 1.5rem;
+}
+
+.form-recap .recap .ticket .nb-people table {
+    width: 100%;
+}
+
+.form-recap .recap .ticket .nb-people table th {
+    text-align: left;
+    padding: 0.5rem 0rem;
+}
+
+.form-recap .recap .ticket .nb-people table tbody th:last-child {
+    padding-bottom: 4rem;
+}
+
+.form-recap .recap .ticket .nb-people table tbody th {
+    font-weight: 400;
+}
+
+.form-recap .recap .ticket .nb-people table td {
+    text-align: right;
+}
+
+.form-recap .recap .ticket .nb-people table tfoot tr {
+    border-top: dashed 1px var(--primary-950);
+}
+
+/* SELL CONDITIONS */
+.form-recap .recap .sell-conditions{
+    max-width: 25rem; /* 30 ou 25rem  */
+}
+
+.form-recap .recap .sell-conditions p{
+    line-height: 1.2;
+}
+
+.form-recap .recap .sell-conditions p span{
+    font-weight: 500;
+}
+
+
+
+/* MEDIAS QUERIES */
+/* above 640px */
+@media (min-width: 40rem) {
+    section.categories .price legend {
+        gap: 3rem;
+    }
+
+    section.categories .price legend {
+        gap: 5rem;
+    }
+
+    section.categories .container {
+        max-width: 30rem;
+    }
+    
+}
+
+/* above 768px */
+@media (min-width: 48rem) {
+    /* section.create {
+        width: 50%;
+    } */
+}
+
+/* above 1024px */
+@media (min-width: 64rem) {
+    .form-recap {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    section.create {
+        width: 50%;
+    }
+}

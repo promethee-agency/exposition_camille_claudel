@@ -1,10 +1,67 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Connexion{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('styles/security/login.css') }}">
+{% endblock %}
 
 {% block main %}
-<br><br><br><br><br><br><br>
-<form method="post">
+<div class="connexion">
+
+    <div class="bloc-connect">
+        <div>
+            <p>{% trans from 'security' %}_commons.bloc-connect{% endtrans %}</p>
+            <p>{% trans from 'security' %}_commons.bloc-connect{% endtrans %}</p>
+            <p>{% trans from 'security' %}_commons.bloc-connect{% endtrans %}</p>
+        </div>
+    </div>
+
+    <div class="form">
+        <h1>{% trans from 'security' %}login.form.title{% endtrans %}</h1>
+
+        <nav class="login-selector" role="navigation" aria-label="Menu secondaire">
+            <a {% if app.request.get('_route') starts with 'app.login' %}class="selected" aria-current="page"{% endif %} href="{{ path('app.login') }}">{% trans from 'security' %}_commons.nav.login{% endtrans %}</a>
+            <a {% if app.request.get('_route') starts with 'app.register' %}class="selected" aria-current="page"{% endif %} href="{{ path('app.register') }}">{% trans from 'security' %}_commons.nav.register{% endtrans %}</a>
+        </nav>
+
+        <div class="wrapper">
+            <div class="sign-in">
+                <form method="POST">
+                    <div class="infos">
+                        <div>
+                            <label for="inputEmail">{% trans from 'security' %}login.form.mail{% endtrans %}</label>
+                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                        </div>
+
+                        <div>
+                            <label for="inputPassword">{% trans from 'security' %}login.form.password{% endtrans %}</label>
+                            <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                        </div>
+                        <input class="btn" type="submit" value="{% trans from 'security' %}login.form.login{% endtrans %}">
+                    </div>
+
+                    <div class="message-box">
+                    {% if error %}
+                        <div class="alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <div class="info">
+                            <br>
+                            <p>{% trans from 'security' %}login.message-box.name{% endtrans %} {{ app.user.userIdentifier }}<p>
+                            <a href="{{ path('app.logout') }}">{% trans from 'security' %}login.message-box.logout{% endtrans %}</a>
+                        </div>
+                    {% endif %}
+                    </div>
+
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                </form>
+            </div>            
+        </div>  
+    </div>
+</div>
+{# <form method="POST">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -28,5 +85,5 @@
     <button class="btn btn-lg btn-primary" type="submit">
         Sign in
     </button>
-</form>
+</form> #}
 {% endblock %}
